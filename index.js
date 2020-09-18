@@ -2,6 +2,7 @@ import { user } from "./src/user.js";
 import { answer } from "./src/answer.js";
 import { funtionsUser } from "./src/funtionsUser.js";
 import { funtionsGeral } from "./src/functionGeral.js";
+import { functionOS } from "./src/functionOS.js";
 
 const prompt = require('prompt-sync')();
 let resp;
@@ -14,6 +15,7 @@ do {
 	answer(resp);
 	funtionsUser(resp, user);
 	funtionsGeral(resp);
+	functionOS(resp);
 } while (resp != "Exit" || resp != "exit" || resp != "Sair" || resp != "sair" || resp != "x" || resp != "X");
 
 
