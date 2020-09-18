@@ -1,5 +1,3 @@
-const batteryLevel = require('battery-level');
-
 export function funtionsGeral(resp) {
 	if (resp === "clear") console.clear();
 	if (resp === "date") {
@@ -12,11 +10,11 @@ export function funtionsGeral(resp) {
 		const date = new Date();
 		console.log(`Time: ${date.getUTCHours()}:${date.getMinutes()}:${date.getSeconds()}:${date.getMilliseconds()}`);
 	}
-	if (resp === "battery") {
-		navigator.getBattery().then(battery => {
-			console.log("Level: " + battery.level * 100 + "%");
-			console.log("Charging: " + battery.charging ? "Yes" : "Nop");
-		});
-	}
+	// if (resp === "battery") {
+	// 	navigator.getBattery().then(battery => {
+	// 		console.log("Level: " + battery.level * 100 + "%");
+	// 		console.log("Charging: " + battery.charging ? "Yes" : "Nop");
+	// 	});
+	// }
 	if (resp === "exit" || resp === "sair" || resp === "x") process.exit();
 }
