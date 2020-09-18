@@ -10,11 +10,10 @@ let resp;
 // getNameUser();
 
 do {
-	resp = prompt("→ ");
+	resp = prompt("→ ").toLowerCase().replace(".", "");
 	answer(resp);
 	funtionsUser(resp, user);
 	funtionsGeral(resp);
-	console.log(resp);
 } while (resp != "Exit" || resp != "exit" || resp != "Sair" || resp != "sair" || resp != "x" || resp != "X");
 
 

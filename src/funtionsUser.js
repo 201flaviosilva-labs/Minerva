@@ -1,8 +1,26 @@
+const prompt = require('prompt-sync')();
+
 export function funtionsUser(resp, user) {
-	if (resp === "User" || resp === "user") {
-		// for (var user in obj) {
-		// 	console.log(user + " = " + obj[user]);
-		// }
-		console.log(user);
+	// Show
+	if (resp === "show user") {
+		for (let x in user) {
+			console.log(x + " → " + user[x]);
+		}
+	}
+	if (resp === "show user name") console.log("User Name → ", user.name);
+	if (resp === "show user language") console.log("User Language → ", user.language);
+
+	// Change
+	if (resp === "change user name") {
+		user.name = prompt("Name: ");
+		console.log("User Name → ", user.name);
+	}
+	if (resp === "change user birth") {
+		let b = { birthDay: 0, birthMonth: 0, birthYear: 0 };
+		b.birthDay = prompt("Day: ");
+		b.birthMonth = prompt("Month: ");
+		b.birthYear = prompt("Year: ");
+		user.birthDate = `${b.birthDay}/${b.birthMonth}/${b.birthYear}`;
+		console.log("User Name → ", user.name);
 	}
 }
