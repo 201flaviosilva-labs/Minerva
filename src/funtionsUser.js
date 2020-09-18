@@ -2,7 +2,7 @@ const prompt = require('prompt-sync')();
 
 export function funtionsUser(resp, user) {
 	// Show
-	if (resp === "show user") {
+	if (resp === "show user" || resp === "user") {
 		for (let x in user) {
 			console.log(x + " → " + user[x]);
 		}
