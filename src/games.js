@@ -5,10 +5,11 @@ import { lyricsSoup } from "./Games/LyricsSoup.js";
 const prompt = require('prompt-sync')();
 
 export function games() {
+	console.clear();
 	const gamesList = ["Rock Paper Scissors", "007", "Guess the Number", "Lyrics Soup"];
 	console.log("Games List: ");
 	for (let i = 0; i < gamesList.length; i++) console.log(`${i + 1} - ${gamesList[i]};`);
-	console.log("Choise number of Game");
+	console.log("Choisee number of Game");
 	const resp = prompt("Game Num: ");
 	if (resp == 1) rockPaperScissors();
 	else if (resp == 2) zeroZeroSeven();

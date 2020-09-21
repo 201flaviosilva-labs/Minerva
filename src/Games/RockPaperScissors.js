@@ -6,7 +6,7 @@ export function rockPaperScissors() {
 	intro();
 	do {
 		showGuns();
-		resp = prompt("Choise: ").toLowerCase();
+		resp = prompt("Choisee: ").toLowerCase();
 		logicGame(resp);
 	} while (resp !== "x");
 }
@@ -22,7 +22,7 @@ function intro() {
 function showGuns() {
 	console.log("-----------------");
 	console.log(`Wins: ${wins} ---- Loses: ${loses}`);
-	console.log("Make your choise:");
+	console.log("Make your choisee:");
 	console.log("R -> Rock");
 	console.log("P -> Paper");
 	console.log("S -> Scissors");
@@ -32,13 +32,13 @@ function showGuns() {
 
 function logicGame(resp) {
 	const guns = ["r", "p", "s"];
-	const cpuChoise = guns[Math.floor(Math.random() * guns.length)];
+	const cpuChoisee = guns[Math.floor(Math.random() * guns.length)];
 	let status;
 	if (resp === "x") console.log("Exit");
-	else if (resp === cpuChoise) {
+	else if (resp === cpuChoisee) {
 		console.log("\x1b[33m", "Just a Draw");
 		status = "=";
-	} else if (resp == "r" && cpuChoise == "s" || resp == "p" && cpuChoise == "r" || resp == "s" && cpuChoise == "p") {
+	} else if (resp == "r" && cpuChoisee == "s" || resp == "p" && cpuChoisee == "r" || resp == "s" && cpuChoisee == "p") {
 		console.log("\x1b[32m", "You are a Big Winner!!");
 		status = ">";
 		wins++;
@@ -47,6 +47,6 @@ function logicGame(resp) {
 		status = "<";
 		loses++;
 	}
-	console.log(` ${resp} ${status} ${cpuChoise}`);
+	console.log(` ${resp} ${status} ${cpuChoisee}`);
 	console.log("\x1b[0m", "");
 }
