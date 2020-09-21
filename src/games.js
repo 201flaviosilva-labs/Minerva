@@ -11,7 +11,7 @@ export function games() {
 	console.log("Choise number of Game");
 	const resp = prompt("Game Num: ");
 	if (resp == 1) rockPaperScissors();
-	if (resp == 2) zeroZeroSeven();
-	if (resp == 3) guessNumber();
-	if (resp == 4) lyricsSoup();
+	else if (resp == 2) zeroZeroSeven();
+	else if (resp == 3) guessNumber();
+	else if (resp == 4) lyricsSoup();
 }
