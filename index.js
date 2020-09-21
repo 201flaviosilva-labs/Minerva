@@ -3,6 +3,7 @@ import { answer } from "./src/answer.js";
 import { funtionsUser } from "./src/funtionsUser.js";
 import { funtionsGeral } from "./src/functionGeral.js";
 import { functionOS } from "./src/functionOS.js";
+import { games } from "./src/games.js";
 
 const prompt = require('prompt-sync')();
 let resp;
@@ -16,7 +17,8 @@ do {
 	funtionsUser(resp, user);
 	funtionsGeral(resp);
 	functionOS(resp);
-} while (resp != "Exit" || resp != "exit" || resp != "Sair" || resp != "sair" || resp != "x" || resp != "X");
+	if (resp == "game" || resp == "games") games();
+} while (resp != "exit" || resp != "sair" || resp != "x");
 
 
 // ----------------------------------------------------------------
