@@ -1,7 +1,7 @@
 {
   "name": "minerva",
   "version": "1.0.0",
-  "description": "Chat Boot em Node.js",
+  "description": "Just a simple console aplication with node.js",
   "main": "index.js",
   "dependencies": {
     "esm": "^3.2.25",
@@ -9,9 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r esm index.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Flávio Silva",
+  "license": "MIT"
 }

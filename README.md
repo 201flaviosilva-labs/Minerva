@@ -1,6 +1,15 @@
 # Minerva
 
-Chat Boot em Node.js.
+## Languagens
 
-- Run
-  > node -r esm index.js
+- PT (Português);
+- EN (Engles)
+
+## Description
+
+Just a simple console aplication with node.js;
+
+## Run:
+
+- > node -r esm index.js
+- > npm start
