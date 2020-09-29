@@ -13,3 +13,5 @@ Just a simple console aplication with node.js;
 
 - > node -r esm index.js
 - > npm start
+
+t
