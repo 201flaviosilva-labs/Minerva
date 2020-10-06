@@ -11,5 +11,4 @@ Just a simple console aplication with node.js;
 
 ## Run:
 
-- > node -r esm index.js
-- > npm start
+> npm start
