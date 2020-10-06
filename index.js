@@ -1,26 +1,26 @@
-// import { user } from "./src/user.js";
-import { answer } from "./src/answer.js";
-import { funtionsUser } from "./src/funtionsUser.js";
-import { funtionsGeral } from "./src/functionGeral.js";
-import { functionOS } from "./src/functionOS.js";
-import { games } from "./src/games.js";
-
 const prompt = require('prompt-sync')();
+
+import { user } from "./src/sudo/user.js";
+import { answer } from "./src/ChatBot/answer.js";
+import { funtionsUser } from "./src/sudo/funtionsUser.js";
+import { funtionsGeral } from "./src/system/geral.js";
+import { functionOS } from "./src/system/OS.js";
+import { games } from "./src/games.js";
 
 let resp;
 
-// getLanguageUser();
-// getNameUser();
-
-do {
-	resp = prompt("→ ").toLowerCase().replace(".", "");
-	answer(resp);
-	// funtionsUser(resp, user);
-	funtionsGeral(resp);
-	functionOS(resp);
-	if (resp == "game" || resp == "games") games();
-} while (resp != "exit" || resp != "sair" || resp != "x");
-
+main();
+function main() {
+	// getLanguageUser();
+	// getNameUser();
+	do {
+		resp = prompt("→ ").toLowerCase().replace(".", "");
+		answer(resp);
+		funtionsGeral(resp);
+		functionOS(resp);
+		if (resp == "game" || resp == "games") games();
+	} while (resp != "exit" || resp != "sair" || resp != "x");
+}
 
 // ----------------------------------------------------------------
 
