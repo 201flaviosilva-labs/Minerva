@@ -4,7 +4,7 @@ import { guessNumber } from "./Games/GuessNumber.js";
 import { lyricsSoup } from "./Games/LyricsSoup.js";
 const prompt = require('prompt-sync')();
 
-export function games() {
+export function MenuGames() {
 	console.clear();
 	const gamesList = ["Rock Paper Scissors", "007", "Guess the Number", "Lyrics Soup"];
 	console.log("Games List: ");

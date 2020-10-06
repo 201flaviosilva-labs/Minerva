@@ -1,11 +1,9 @@
 const prompt = require('prompt-sync')();
 
-import { user } from "./src/sudo/user.js";
-import { answer } from "./src/ChatBot/answer.js";
-import { funtionsUser } from "./src/sudo/funtionsUser.js";
-import { funtionsGeral } from "./src/system/geral.js";
-import { functionOS } from "./src/system/OS.js";
-import { games } from "./src/games.js";
+import { MenuChat } from "./src/ChatBot/MenuChat.js";
+import { MenuSudo } from "./src/System/Sudo.js.js";
+import { MenuSystem } from "./src/System/MenuSystem.js";
+import { MenuGames } from "./src/MenuGames.js";
 
 let resp;
 
@@ -13,12 +11,14 @@ main();
 function main() {
 	// getLanguageUser();
 	// getNameUser();
+
 	do {
 		resp = prompt("→ ").toLowerCase().replace(".", "");
-		answer(resp);
-		funtionsGeral(resp);
-		functionOS(resp);
-		if (resp == "game" || resp == "games") games();
+		if (resp == "chat") MenuChat();
+		else if (resp == "sudo") MenuSudo();
+		else if (resp == "system") MenuSystem();
+		else if (resp == "game" || resp == "games") MenuGames();
+		else console.log("Unknown -> Out of bounds!!!");
 	} while (resp != "exit" || resp != "sair" || resp != "x");
 }
 
