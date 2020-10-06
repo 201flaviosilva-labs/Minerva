@@ -1,4 +1,4 @@
-import { user } from "./src/user.js";
+// import { user } from "./src/user.js";
 import { answer } from "./src/answer.js";
 import { funtionsUser } from "./src/funtionsUser.js";
 import { funtionsGeral } from "./src/functionGeral.js";
@@ -6,6 +6,7 @@ import { functionOS } from "./src/functionOS.js";
 import { games } from "./src/games.js";
 
 const prompt = require('prompt-sync')();
+
 let resp;
 
 // getLanguageUser();
@@ -14,7 +15,7 @@ let resp;
 do {
 	resp = prompt("→ ").toLowerCase().replace(".", "");
 	answer(resp);
-	funtionsUser(resp, user);
+	// funtionsUser(resp, user);
 	funtionsGeral(resp);
 	functionOS(resp);
 	if (resp == "game" || resp == "games") games();
