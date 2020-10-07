@@ -1,9 +1,10 @@
 const prompt = require('prompt-sync')();
 
 import { MenuChat } from "./src/ChatBot/MenuChat.js";
-import { MenuSudo } from "./src/System/Sudo.js.js";
+import { MenuSudo } from "./src/Sudo/MenuSudo.js";
 import { MenuSystem } from "./src/System/MenuSystem.js";
-import { MenuGames } from "./src/MenuGames.js";
+import { MenuGames } from "./src/Games/MenuGames.js";
+import { MenuApp } from "./src/App/MenuApp.js";
 
 let resp;
 
@@ -12,12 +13,23 @@ function main() {
 	// getLanguageUser();
 	// getNameUser();
 
+	console.clear();
 	do {
+		console.log("--------------------");
+		console.log("What you want to do?");
+		console.log("1 - Chat;");
+		console.log("2 - Sudo (User);");
+		console.log("3 - System;");
+		console.log("4 - Games;");
+		console.log("5 - Apps;");
+		console.log("--------------------");
 		resp = prompt("→ ").toLowerCase().replace(".", "");
-		if (resp == "chat") MenuChat();
-		else if (resp == "sudo") MenuSudo();
-		else if (resp == "system") MenuSystem();
-		else if (resp == "game" || resp == "games") MenuGames();
+		// resp = "x";
+		if (resp == "chat" || resp == "1") MenuChat();
+		else if (resp == "sudo" || resp == "2") MenuSudo();
+		else if (resp == "system" || resp == "3") MenuSystem();
+		else if (resp == "game" || resp == "games" || resp == "4") MenuGames();
+		else if (resp == "app" || resp == "apps" || resp == "5") MenuApp();
 		else console.log("Unknown -> Out of bounds!!!");
 	} while (resp != "exit" || resp != "sair" || resp != "x");
 }

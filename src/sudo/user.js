@@ -3,7 +3,8 @@ const db = new PouchDB('./db'); // Criar Base de Dados
 
 main();
 function main() {
-	createUser();
+	// createUser();
+	findUser("1");
 }
 
 function createUser() {
