@@ -7,8 +7,6 @@ export function funtionsUser(resp, user) {
 			console.log(x + " → " + user[x]);
 		}
 	}
-	if (resp === "show user name") console.log("User Name → ", user.name);
-	if (resp === "show user language") console.log("User Language → ", user.language);
 
 	// Change
 	if (resp === "change user name") {
