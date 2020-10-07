@@ -1,18 +1,28 @@
-import { rockPaperScissors } from "./Games/RockPaperScissors.js";
-import { zeroZeroSeven } from "./Games/007.js";
-import { guessNumber } from "./Games/GuessNumber.js";
-import { lyricsSoup } from "./Games/LyricsSoup.js";
+import { rockPaperScissors } from "./RockPaperScissors.js";
+import { zeroZeroSeven } from "./007.js";
+import { guessNumber } from "./GuessNumber.js";
+import { CoinFlip } from "./CoinFlip.js";
+// import { lyricsSoup } from "./LyricsSoup.js";
 const prompt = require('prompt-sync')();
 
 export function MenuGames() {
 	console.clear();
-	const gamesList = ["Rock Paper Scissors", "007", "Guess the Number", "Lyrics Soup"];
+
 	console.log("Games List: ");
-	for (let i = 0; i < gamesList.length; i++) console.log(`${i + 1} - ${gamesList[i]};`);
+	console.log("1 - Rock Paper Scissors");
+	console.log("2 - 007");
+	console.log("3 - Guess the Number");
+	console.log("4 - Coin Flip");
+	// console.log("5 - Role Dice");
+
+
 	console.log("Choisee number of Game");
-	const resp = prompt("Game Num: ");
+	const resp = prompt("Games → ").toLowerCase().replace(".", "");
+
 	if (resp == 1) rockPaperScissors();
 	else if (resp == 2) zeroZeroSeven();
 	else if (resp == 3) guessNumber();
-	// else if (resp == 4) lyricsSoup();
+	else if (resp == 4) CoinFlip();
+	// else if (resp == 5) guessNumber();
+	// else if (resp == 6) lyricsSoup();
 }
