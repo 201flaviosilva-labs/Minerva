@@ -16,7 +16,7 @@ export function MagicWords() {
 
 	console.log("--------------------------------");
 	console.log("Word: " + word);
-	console.log("Reverse Sentence: " + reverseSentence);
+	console.log("Yoda: " + reverseSentence);
 	console.log("Reverse: " + reverseWord);
 	console.log("Low: " + lowWord);
 	console.log("Up: " + uperWord);
