@@ -1,35 +1,59 @@
-const prompt = require('prompt-sync')();
+const term = require('terminal-kit').terminal;
 
-GrandeRolo();
-const resp;
-function GrandeRolo() {
-	// export function GrandeRolo() {
-	// resp = prompt("Choisee: ").toLowerCase();
+function randomDice() { return Math.floor(Math.random() * 6) + 1; }
+let playerPoints = 0;
+let cpuPoints = 0;
+
+let playerDice = [];
+let cpuDice = [];
+
+// GrandeRolo();
+// function GrandeRolo() {
+export function RoleDice() {
 	intro();
-	grandeRoloMethod();
+	game();
 }
 
 function intro() {
-	console.log("-----------------");
-	console.log("-- Grande Rolo --");
-	console.log("-----------------");
+	console.clear();
+	console.log("---------------");
+	console.log("-- Role Dice --");
+	console.log("---------------");
 	console.log("Neste jogo o teu objetivo:\n -> Rolar 4 dados;\n -> Ter mais pontos que o adversário;");
 	console.log("");
 }
 
-function grandeRoloMethod() {
-	console.log("Player:");
+function game() {
+	term.blue("Player");
+	console.log("");
+	playerPoints = rollDice(playerDice);
 
-	const playerDice = [];
-	for (let i = 1; i <= 4; i++) {
-		const dice = randomDice();
-		playerDice.push(dice);
-		drawDice(dice);
-	}
+	console.log("--------------------------------");
+	term.red("Enemy");
+	console.log("");
+	cpuPoints = rollDice(cpuDice);
+
+	// term.table([
+	// 	['Rolls -', 'Player', 'Enemy'],
+	// 	['Roll #1', `${drawDice(playerDice[0])}`, `${drawDice(cpuDice[0])}`],
+	// 	['Roll #2', `${drawDice(playerDice[1])}`, `${drawDice(cpuDice[1])}`],
+	// 	['Roll #3', `${drawDice(playerDice[2])}`, `${drawDice(cpuDice[2])}`],
+	// 	['Roll #4', `${drawDice(playerDice[3])}`, `${drawDice(cpuDice[3])}`],
+	// ]);
+
+
+	decison(); // decide who wins
 }
 
-function randomDice() {
-	return Math.floor(Math.random() * 6) + 1;
+function rollDice(arr) {
+	let p = 0;
+	for (let i = 1; i <= 4; i++) {
+		const dice = randomDice();
+		arr.push(dice);
+		p += dice;
+		drawDice(dice);
+	}
+	return p;
 }
 
 function drawDice(n) {
@@ -58,7 +82,11 @@ function drawDice(n) {
 }
 
 function decison() {
-	if (somaDadosCpu < somaDadosUtilizador) console.log("Venceste!");
-	else if (somaDadosCpu > somaDadosUtilizador) console.log("Perdeste!");
-	else console.log("O jogo ficou empatado!");
+	console.log("--------------------------------------------------------------------------------");
+	console.log("Player: " + playerPoints);
+	console.log("Enemy: " + cpuPoints);
+	if (cpuPoints < playerPoints) term.green("Win!");
+	else if (cpuPoints > playerPoints) term.red("Lose!");
+	else term.yellow("Just a simple Draw");
+	console.log("");
 }
