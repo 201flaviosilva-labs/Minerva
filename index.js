@@ -22,8 +22,9 @@ function main() {
 		console.log("3 - System;");
 		console.log("4 - Games;");
 		console.log("5 - Apps;");
+		console.log("X - Exit;");
 		console.log("--------------------");
-		resp = prompt("→ ").toLowerCase().replace(".", "");
+		resp = prompt("→ ").toLowerCase();
 		// resp = "x";
 		if (resp == "chat" || resp == "1") MenuChat();
 		else if (resp == "sudo" || resp == "2") MenuSudo();
