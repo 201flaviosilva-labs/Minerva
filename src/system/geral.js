@@ -16,5 +16,4 @@ export function funtionsGeral(resp) {
 	// 		console.log("Charging: " + battery.charging ? "Yes" : "Nop");
 	// 	});
 	// }
-	if (resp === "exit" || resp === "sair" || resp === "x") process.exit();
 }
