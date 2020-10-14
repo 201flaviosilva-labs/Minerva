@@ -2,7 +2,9 @@ import { rockPaperScissors } from "./RockPaperScissors.js";
 import { zeroZeroSeven } from "./007.js";
 import { guessNumber } from "./GuessNumber.js";
 import { CoinFlip } from "./CoinFlip.js";
-// import { lyricsSoup } from "./LyricsSoup.js";
+import { RoleDice } from "./RoleDice.js";
+import { BlackJack } from "./BlackJack.js";
+
 const prompt = require('prompt-sync')();
 
 export function MenuGames() {
@@ -13,8 +15,8 @@ export function MenuGames() {
 	console.log("2 - 007");
 	console.log("3 - Guess the Number");
 	console.log("4 - Coin Flip");
-	// console.log("5 - Role Dice");
-
+	console.log("5 - Role Dice");
+	console.log("6 - Black Jack");
 
 	console.log("Choisee number of Game");
 	const resp = prompt("Games → ").toLowerCase().replace(".", "");
@@ -23,6 +25,6 @@ export function MenuGames() {
 	else if (resp == 2) zeroZeroSeven();
 	else if (resp == 3) guessNumber();
 	else if (resp == 4) CoinFlip();
-	// else if (resp == 5) guessNumber();
-	// else if (resp == 6) lyricsSoup();
+	else if (resp == 5) RoleDice();
+	else if (resp == 6) BlackJack();
 }
