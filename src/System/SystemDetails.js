@@ -1,5 +1,5 @@
 const os = require("os");
-export function SystsemDatails() {
+export function SystemDetails() {
 	console.clear();
 
 	console.log("Operating System Information:\n");
