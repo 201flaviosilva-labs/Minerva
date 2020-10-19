@@ -1,6 +1,7 @@
 const prompt = require('prompt-sync')();
 
 export function MagicWords() {
+	console.clear();
 	console.log("Write something:");
 
 	const word = prompt("Something → ");
@@ -10,7 +11,7 @@ export function MagicWords() {
 	const lowWord = word.toLowerCase();
 	const uperWord = word.toUpperCase();
 	const noStacesWord = word.trim();
-	const noReallyStacesWord = word.split("");
+	const noReallyStacesWord = word.split("").join("");
 	const justNumeberWord = word.replace(/[^0-9]/g, '');
 	const justLetersWord = word.replace(/[^a-zA-Z]/g, '');
 

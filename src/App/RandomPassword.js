@@ -1,4 +1,5 @@
 export function RandomPassword() {
+	console.clear();
 	const char = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#$%&/()=?!*+,;:.-_<>[]{}";
 	let password = "";
 	for (let i = 0; i < 12; i++) {

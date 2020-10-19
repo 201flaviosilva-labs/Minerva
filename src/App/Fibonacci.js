@@ -1,4 +1,5 @@
 export function Fibonacci() {
+	console.clear();
 	console.log("--- Fibonacci ---");
 	let num1 = 0, num2 = 1;
 	for (let i = 0; i < 100; i++) {

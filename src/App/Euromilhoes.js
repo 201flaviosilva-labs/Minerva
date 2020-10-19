@@ -1,4 +1,5 @@
 export function Euromilhoes() {
+	console.clear();
 	let numbers = [];
 	let stars = [];
 

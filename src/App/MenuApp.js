@@ -6,6 +6,7 @@ import { Fibonacci } from "./Fibonacci.js";
 import { MagicWords } from "./MagicWords.js";
 import { RandomPassword } from "./RandomPassword.js";
 import { Triangles } from "./Triangles.js";
+import { Infinity } from "./Infinity.js";
 
 const prompt = require('prompt-sync')();
 
@@ -20,6 +21,7 @@ export function MenuApp() {
 	console.log("6 - Magic Words;");
 	console.log("7 - Random Password;");
 	console.log("8 - Triangles;");
+	console.log("9 - Infinity;");
 	console.log("X - Exit;");
 
 	const resp = prompt("Apps → ").toLowerCase().replace(".", "");
@@ -32,5 +34,6 @@ export function MenuApp() {
 	else if (resp == "6" || resp == "magicwords") MagicWords();
 	else if (resp == "7" || resp == "randompassword") RandomPassword();
 	else if (resp == "8" || resp == "triangles") Triangles();
+	else if (resp == "9" || resp == "Infinity") Infinity();
 	else console.log("Unknown -> Out of bounds!!!");
 }

@@ -1,6 +1,7 @@
 const prompt = require('prompt-sync')();
 
 export function AmazingWords() {
+	console.clear();
 	console.log("Write something:");
 	const resp = prompt("→ ").toLowerCase();
 	console.log("-------------------------");

@@ -1,4 +1,5 @@
 export function Cards() {
+	console.clear();
 	console.log("-------------------------");
 	console.log("------ Show Cards -------");
 	console.log("-------------------------");

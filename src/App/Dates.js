@@ -1,6 +1,7 @@
 const prompt = require('prompt-sync')();
 
 export function Dates() {
+	console.clear();
 	console.log("Write some date:");
 	const day = prompt("Day → ");
 	const month = prompt("Month → ");
