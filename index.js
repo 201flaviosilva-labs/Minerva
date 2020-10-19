@@ -10,41 +10,32 @@ let resp;
 
 main();
 function main() {
-	// getLanguageUser();
 	// getNameUser();
 
 	console.clear();
 	do {
 		console.log("--------------------");
 		console.log("What you want to do?");
-		console.log("1 - Chat;");
-		console.log("2 - Sudo (User);");
-		console.log("3 - System;");
-		console.log("4 - Games;");
-		console.log("5 - Apps;");
+		console.log("1 - Apps;");
+		console.log("2 - Chat;");
+		console.log("3 - Games;");
+		console.log("4 - Sudo (User);");
+		console.log("5 - System;");
 		console.log("X - Exit;");
 		console.log("--------------------");
 		resp = prompt("→ ").toLowerCase();
 		// resp = "x";
-		if (resp == "chat" || resp == "1") MenuChat();
-		else if (resp == "sudo" || resp == "2") MenuSudo();
-		else if (resp == "system" || resp == "3") MenuSystem();
-		else if (resp == "game" || resp == "games" || resp == "4") MenuGames();
-		else if (resp == "app" || resp == "apps" || resp == "5") MenuApp();
+		if (resp == "app" || resp == "apps" || resp == "1") MenuApp();
+		else if (resp == "chat" || resp == "2") MenuChat();
+		else if (resp == "game" || resp == "games" || resp == "3") MenuGames();
+		else if (resp == "sudo" || resp == "4") MenuSudo();
+		else if (resp == "system" || resp == "5") MenuSystem();
 		else console.log("Unknown -> Out of bounds!!!");
+		if (resp === "exit" || resp === "sair" || resp === "x") break;
 	} while (resp != "exit" || resp != "sair" || resp != "x");
 }
 
 // ----------------------------------------------------------------
-
-function getLanguageUser() {
-	console.log("What language is best for you?");
-	console.log("1 -> Ingles");
-	console.log("2 -> Portuguese");
-	resp = prompt('1 / 2: ');
-	if (resp == 1) user.language = "en";
-	if (resp == 2) user.language = "pt";
-}
 
 function getNameUser() {
 	if (user.language === "en") {
