@@ -1,6 +1,8 @@
 const prompt = require('prompt-sync')();
+const term = require('terminal-kit').terminal;
 
 export function CoinFlip() {
+	console.clear();
 	intro();
 	let coin;
 	do {
@@ -16,7 +18,6 @@ export function CoinFlip() {
 }
 
 function intro() {
-	console.clear();
 	console.log("------ Coin Flip ------");
 	console.log("Choise one of 2 options;");
 	console.log("The coin will jump and flip;");
@@ -27,6 +28,6 @@ function intro() {
 function game(coin) {
 	const possible = ["K", "F"];
 	const flag = possible[Math.floor(Math.random() * 2)];
-	if (flag == coin) console.log("You Win!");
-	else console.log("You Faill!");
+	if (flag == coin) term.green("You Win!");
+	else term.red("You Faill!");
 }

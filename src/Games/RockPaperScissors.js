@@ -2,17 +2,18 @@ const prompt = require('prompt-sync')();
 let wins = 0, loses = 0;
 
 export function rockPaperScissors() {
+	console.clear();
 	let resp;
 	intro();
 	do {
 		showGuns();
 		resp = prompt("Choisee: ").toLowerCase();
+		console.clear();
 		logicGame(resp);
 	} while (resp !== "x");
 }
 
 function intro() {
-	console.clear();
 	console.log("------ Rock Paper Scissors ------");
 	console.log("Rock > Scissors");
 	console.log("Paper > Rock");

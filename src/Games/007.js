@@ -2,6 +2,7 @@ const prompt = require('prompt-sync')();
 let bullets = 0, cpuBullets = 0, resp = "";
 
 export function zeroZeroSeven() {
+	console.clear();
 	bullets = 0;
 	cpuBullets = 0;
 	intro();
@@ -17,7 +18,6 @@ export function zeroZeroSeven() {
 }
 
 function intro() {
-	console.clear();
 	console.log("------ OO7 ------");
 	console.log("Reload > Fire");
 	console.log("Shild = Fire");
