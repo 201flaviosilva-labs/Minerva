@@ -1,4 +1,4 @@
-export function Date() {
+export function showDate() {
 	console.clear();
 	const week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 	const date = new Date();

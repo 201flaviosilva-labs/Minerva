@@ -1,6 +1,4 @@
-const batteryLevel = require('battery-level');
+const si = require('systeminformation');
 export function Battery() {
-	console.clear();
-	console.log("Battery: ");
-	(async () => console.log(await batteryLevel()))();
+	si.battery().then(data => console.log(data)).catch(error => console.log("Error"));
 }
