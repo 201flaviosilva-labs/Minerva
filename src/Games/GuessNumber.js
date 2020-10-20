@@ -12,6 +12,7 @@ export function guessNumber() {
 		else console.log("Need to be a number!");
 	} while (n !== "x");
 	console.log("Exit");
+	console.clear();
 }
 
 function intro() {
