@@ -6,13 +6,31 @@ import { MenuSystem } from "./src/System/MenuSystem.js";
 import { MenuGames } from "./src/Games/MenuGames.js";
 import { MenuApp } from "./src/App/MenuApp.js";
 
+import { createUser } from "./src/Sudo/user";
+
 let resp;
+let user = { name: "user", lang: "en" };
 
 main();
 function main() {
-	// getNameUser();
-
 	console.clear();
+	createUser(user);
+
+	// getNameUser();
+	showOptions();
+}
+
+function getNameUser() {
+	console.log("Heyy!");
+	console.log("My name is Minerva, I'm just a computer program.");
+	console.log("I was build to serve you, for your entertaining.");
+	console.log("With me you can have fun.");
+	console.log("What is yout name?");
+	resp = prompt("Name: ");
+	user.name = resp;
+}
+
+function showOptions() {
 	do {
 		console.log("--------------------");
 		console.log("What you want to do?");
@@ -33,23 +51,4 @@ function main() {
 		else console.log("Unknown -> Out of bounds!!!");
 		if (resp === "exit" || resp === "sair" || resp === "x") break;
 	} while (resp != "exit" || resp != "sair" || resp != "x");
-}
-
-// ----------------------------------------------------------------
-
-function getNameUser() {
-	if (user.language === "en") {
-		console.log("Heyy!");
-		console.log("My name is Minerva, I'm just a computer program.");
-		console.log("I was build to serve you, for your entertaining.");
-		console.log("What is yout name?");
-		resp = prompt("Name: ");
-	} else {
-		console.log("Olá!");
-		console.log("O meu nome é Minerva, sou um programa de computador.");
-		console.log("Fui criada para te servir, para te entreter.");
-		console.log("Como te chamas?");
-		resp = prompt("Nome: ");
-	}
-	user.name = resp;
 }
