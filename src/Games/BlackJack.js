@@ -6,6 +6,14 @@ let playerDeck = [], cpuDeck = [], playerPoints = 0, cpuPoints = 0;
 // zeroZeroSeven();
 // function zeroZeroSeven() {
 export function BlackJack() {
+	// Reset
+	deck = [];
+	resp = "n";
+	playerDeck = [];
+	cpuDeck = [];
+	playerPoints = 0;
+	cpuPoints = 0;
+
 	console.clear();
 	intro();
 	creatNewDeck();
