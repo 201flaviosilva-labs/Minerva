@@ -7,6 +7,7 @@ import { MagicWords } from "./MagicWords.js";
 import { RandomPassword } from "./RandomPassword.js";
 import { Triangles } from "./Triangles.js";
 import { Infinity } from "./Infinity.js";
+import { EndOfNode } from "./EndOfNode.js";
 
 const prompt = require('prompt-sync')();
 
@@ -22,6 +23,7 @@ export function MenuApp() {
 	console.log("7 - Random Password;");
 	console.log("8 - Triangles;");
 	console.log("9 - Infinity;");
+	console.log("10 - End of Node;");
 	console.log("X - Exit;");
 
 	const resp = prompt("Apps → ").toLowerCase().replace(".", "");
@@ -35,5 +37,6 @@ export function MenuApp() {
 	else if (resp == "7" || resp == "randompassword") RandomPassword();
 	else if (resp == "8" || resp == "triangles") Triangles();
 	else if (resp == "9" || resp == "Infinity") Infinity();
+	else if (resp == "10" || resp == "endofnode") EndOfNode();
 	else console.log("Unknown -> Out of bounds!!!");
 }

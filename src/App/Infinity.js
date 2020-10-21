@@ -3,6 +3,6 @@ export function Infinity() {
 	let x = 0;
 	while (true) {
 		x++;
-		console.log("true");
+		console.log(x);
 	}
 }
