@@ -1,4 +1,4 @@
-import { answer } from "./answer.js";
+import { answers } from "./answers.js";
 const prompt = require('prompt-sync')();
 
 export function MenuChat() {
