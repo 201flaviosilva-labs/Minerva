@@ -6,7 +6,7 @@ import { MenuSystem } from "./src/System/MenuSystem.js";
 import { MenuGames } from "./src/Games/MenuGames.js";
 import { MenuApp } from "./src/App/MenuApp.js";
 
-import { createUser } from "./src/Sudo/user";
+import { createUser, showUser } from "./src/Sudo/user";
 
 let resp;
 let user = { name: "user", lang: "en" };
@@ -14,10 +14,12 @@ let user = { name: "user", lang: "en" };
 main();
 function main() {
 	console.clear();
-	createUser(user);
+	// createUser(user);
+	// editeName("Silva");
+	// console.log(showUser());
 
 	// getNameUser();
-	showOptions();
+	// showOptions();
 }
 
 function getNameUser() {
