@@ -24,7 +24,7 @@ export function MenuSystem() {
 
 	if (resp == "1" || resp === "date") showDate();
 	else if (resp == "2" || resp === "time") Time();
-	else if (resp == "3" || resp === "battery") Battery(si);
+	else if (resp == "3" || resp === "battery") Battery();
 	else if (resp == "4" || resp === "cpu" || resp === "processor") Processor();
 	else if (resp == "5" || resp === "hw" || resp === "hardware") Hardware();
 	else if (resp == "6" || resp === "memory") Memory();
