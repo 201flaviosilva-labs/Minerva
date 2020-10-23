@@ -6,20 +6,18 @@ import { MenuSystem } from "./src/System/MenuSystem.js";
 import { MenuGames } from "./src/Games/MenuGames.js";
 import { MenuApp } from "./src/App/MenuApp.js";
 
-import { createUser, showUser } from "./src/Sudo/user";
+import { createDB, editeUser } from "./src/Sudo/user";
 
 let resp;
-let user = { name: "user", lang: "en" };
 
 main();
 function main() {
-	console.clear();
-	// createUser(user);
-	// editeName("Silva");
-	// console.log(showUser());
+	createDB({ name: "user", lang: "en" });
 
-	// getNameUser();
-	// showOptions();
+	console.clear();
+
+	getNameUser();
+	showOptions();
 }
 
 function getNameUser() {
@@ -29,7 +27,7 @@ function getNameUser() {
 	console.log("With me you can have fun.");
 	console.log("What is yout name?");
 	resp = prompt("Name: ");
-	user.name = resp;
+	editeUser("name", resp);
 }
 
 function showOptions() {
