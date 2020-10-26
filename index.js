@@ -1,10 +1,10 @@
 const prompt = require('prompt-sync')();
 
-import { MenuChat } from "./src/ChatBot/MenuChat.js";
+import { MenuApp } from "./src/App/MenuApp.js";
+import { ChatBot } from "./src/ChatBot/ChatBot.js";
+import { MenuGames } from "./src/Games/MenuGames.js";
 import { MenuSudo } from "./src/Sudo/MenuSudo.js";
 import { MenuSystem } from "./src/System/MenuSystem.js";
-import { MenuGames } from "./src/Games/MenuGames.js";
-import { MenuApp } from "./src/App/MenuApp.js";
 
 import { createDB, editeUser } from "./src/Sudo/user";
 
@@ -42,9 +42,9 @@ function showOptions() {
 		console.log("X - Exit;");
 		console.log("--------------------");
 		resp = prompt("→ ").toLowerCase();
-		// resp = "x";
+		// resp = "2";
 		if (resp == "app" || resp == "apps" || resp == "1") MenuApp();
-		else if (resp == "chat" || resp == "2") MenuChat();
+		else if (resp == "chat" || resp == "2") ChatBot();
 		else if (resp == "game" || resp == "games" || resp == "3") MenuGames();
 		else if (resp == "sudo" || resp == "4") MenuSudo();
 		else if (resp == "system" || resp == "5") MenuSystem();
