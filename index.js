@@ -1,5 +1,6 @@
 const prompt = require('prompt-sync')();
 
+
 import { MenuApp } from "./src/App/MenuApp.js";
 import { ChatBot } from "./src/ChatBot/ChatBot.js";
 import { MenuGames } from "./src/Games/MenuGames.js";
@@ -16,7 +17,7 @@ function main() {
 
 	console.clear();
 
-	getNameUser();
+	// getNameUser();
 	showOptions();
 }
 
@@ -42,7 +43,6 @@ function showOptions() {
 		console.log("X - Exit;");
 		console.log("--------------------");
 		resp = prompt("→ ").toLowerCase();
-		// resp = "2";
 		if (resp == "app" || resp == "apps" || resp == "1") MenuApp();
 		else if (resp == "chat" || resp == "2") ChatBot();
 		else if (resp == "game" || resp == "games" || resp == "3") MenuGames();
@@ -51,4 +51,6 @@ function showOptions() {
 		else console.log("Unknown -> Out of bounds!!!");
 		if (resp === "exit" || resp === "sair" || resp === "x") break;
 	} while (resp != "exit" || resp != "sair" || resp != "x");
+
+	console.log("Bye");
 }
