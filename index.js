@@ -17,7 +17,7 @@ function main() {
 
 	console.clear();
 
-	// getNameUser();
+	getNameUser();
 	showOptions();
 }
 
