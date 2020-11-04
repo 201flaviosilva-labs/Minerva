@@ -2,9 +2,10 @@ const prompt = require('prompt-sync')();
 let bullets = 0, cpuBullets = 0, resp = "";
 
 export function zeroZeroSeven() {
-	console.clear();
 	bullets = 0;
 	cpuBullets = 0;
+	resp = "";
+	console.clear();
 	intro();
 	do {
 		showGuns();
@@ -44,13 +45,12 @@ function logicGame(userChoisee) {
 	const guns = ["f", "r", "s"];
 	let cpuChoisee;
 
-	do {
-		cpuChoisee = guns[Math.floor(Math.random() * guns.length)];
-		if (cpuChoisee == guns[2] && cpuBullets == 0) cpuChoisee = "";
-	} while (cpuChoisee === "");
+	cpuChoisee = guns[Math.floor(Math.random() * guns.length)];
+	if (cpuChoisee == guns[0] && cpuBullets == 0) cpuChoisee = guns[1];
 
 	if (userChoisee == guns[1]) bullets++;
 	else if (userChoisee == guns[0]) bullets--;
+
 	if (cpuChoisee == guns[1]) cpuBullets++;
 	else if (cpuChoisee == guns[0]) cpuBullets--;
 
@@ -64,7 +64,7 @@ function logicGame(userChoisee) {
 		status = ">";
 		resp = "x";
 	} else {
-		console.log("\x1b[33m", "Just a Draw");
+		console.log("\x1b[33m", "No one died!");
 		status = "=";
 	}
 	console.log(` ${userChoisee} ${status} ${cpuChoisee}`);
