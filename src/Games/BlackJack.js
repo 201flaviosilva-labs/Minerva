@@ -1,3 +1,4 @@
+// With dangerous bugs!!
 const prompt = require('prompt-sync')();
 function randomNumber(n) { return Math.floor(Math.random() * n); }
 let deck = [], resp = "n";

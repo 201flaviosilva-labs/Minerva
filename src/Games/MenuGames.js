@@ -3,7 +3,7 @@ import { zeroZeroSeven } from "./007.js";
 import { guessNumber } from "./GuessNumber.js";
 import { CoinFlip } from "./CoinFlip.js";
 import { RoleDice } from "./RoleDice.js";
-import { BlackJack } from "./BlackJack.js";
+// import { BlackJack } from "./BlackJack.js";
 
 const prompt = require('prompt-sync')();
 
@@ -15,7 +15,7 @@ export function MenuGames() {
 	console.log("3 - Guess the Number");
 	console.log("4 - Coin Flip");
 	console.log("5 - Role Dice");
-	console.log("6 - Black Jack");
+	// console.log("6 - Black Jack");
 	console.log("X - Exit");
 
 	console.log("Choisee number of Game");
@@ -26,6 +26,6 @@ export function MenuGames() {
 	else if (resp == 3) guessNumber();
 	else if (resp == 4) CoinFlip();
 	else if (resp == 5) RoleDice();
-	else if (resp == 6) BlackJack();
+	// else if (resp == 6) BlackJack();
 	else console.log("Error -> Out of bounds!!!");
 }

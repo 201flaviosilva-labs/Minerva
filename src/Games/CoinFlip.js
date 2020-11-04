@@ -26,8 +26,11 @@ function intro() {
 }
 
 function game(coin) {
+	console.log("-------");
 	const possible = ["K", "F"];
 	const flag = possible[Math.floor(Math.random() * 2)];
+	term.bgYellow(flag == "K" ? "King" : "Face");
 	if (flag == coin) term.green("You Win!");
 	else term.red("You Faill!");
+	console.log("");
 }
