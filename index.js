@@ -1,4 +1,5 @@
 const prompt = require('prompt-sync')();
+const fs = require("fs");
 
 
 import { MenuApp } from "./src/App/MenuApp.js";
@@ -17,7 +18,7 @@ function main() {
 
 	console.clear();
 
-	getNameUser();
+	if (!fs.existsSync("./db/user.json")) getNameUser();
 	showOptions();
 }
 

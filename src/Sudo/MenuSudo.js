@@ -4,7 +4,7 @@ const prompt = require('prompt-sync')();
 export function MenuSudo() {
 	console.clear();
 	console.log("Sudo options:");
-	console.log("1 - Show Name");
+	console.log("1 - Show User");
 	console.log("2 - Edite Name");
 	console.log("3 - Edite Language");
 
