@@ -40,7 +40,7 @@ function showOptions() {
 		console.log("2 - Chat;");
 		console.log("3 - Games;");
 		console.log("4 - Sudo (User);");
-		console.log("5 - System;");
+		// console.log("5 - System;");
 		console.log("X - Exit;");
 		console.log("--------------------");
 		resp = prompt("→ ").toLowerCase();
