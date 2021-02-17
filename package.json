@@ -7,7 +7,7 @@
     "esm": "^3.2.25",
     "prompt-sync": "^4.2.0",
     "rimraf": "^3.0.2",
-    "systeminformation": "^4.31.1",
+    "systeminformation": "^5.3.1",
     "terminal-kit": "^1.43.0"
   },
   "devDependencies": {},
